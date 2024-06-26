@@ -42,11 +42,11 @@ public class AlertViews extends IosAction {
 
 
 
-    @iOSXCUITFindBy(accessibility = "name BEGINSWITH[c] 'A message'")
+    @iOSXCUITFindBy(iOSNsPredicate = "name BEGINSWITH[c] 'A message'")
     private WebElement confirmMessage;
 
 
-    @iOSXCUITFindBy(iOSNsPredicate = "label == 'Confirm'")
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='Confirm']")
     private WebElement submit;
 
   public  void fillTextLbel(String txt){
@@ -62,6 +62,9 @@ public class AlertViews extends IosAction {
       confiromMenuItem.click();
     return   confirmMessage.getText();
 
+  }
+  public  void clickConfrom(){
+      submit.click();
   }
 
 

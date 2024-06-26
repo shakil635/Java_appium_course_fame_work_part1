@@ -24,7 +24,7 @@ public class HomePage extends IosAction {
 
 
     //driver.findElement(AppiumBy.accessibilityId("Alert Views")).click();
-    @iOSXCUITFindBy(accessibility = "Alert Views")
+    @iOSXCUITFindBy(xpath ="//XCUIElementTypeStaticText[@name='Alert Views']")
     private WebElement alertView;
 
     public AlertViews selectAlertView(){

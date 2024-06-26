@@ -13,7 +13,8 @@ public class IosBasic extends IosBaseTest {
         AlertViews alertViews = homePage.selectAlertView();
         alertViews.fillTextLbel("Hello");
         String actualMessage = alertViews.getConfirmMessage();
-        Assert.assertEquals(actualMessage , "A message should be short, complete sentence.");
+        Assert.assertEquals(actualMessage , "A message should be a short, complete sentence.");
+        alertViews.clickConfrom();
 
     }
 
