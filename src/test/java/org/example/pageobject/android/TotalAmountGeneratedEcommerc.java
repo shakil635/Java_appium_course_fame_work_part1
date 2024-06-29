@@ -9,7 +9,6 @@ public class TotalAmountGeneratedEcommerc extends BaseTest{
     public  void  totalAmontGenerateCheck() throws InterruptedException {
 
         //FromPage fromPage = new FromPage(driver);  //this object call BaseTest blew manage
-
         //ProductCatalog productCatalog1 = new ProductCatalog(driver);
 
         fromPage.setNameFailed("Alice");

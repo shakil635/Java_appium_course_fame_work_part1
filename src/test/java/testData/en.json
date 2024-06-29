@@ -1,0 +1,15 @@
+[
+
+  {
+    "name": "Alice",
+    "gender": "Female",
+    "country": "India"
+
+  },
+  {
+    "name": "Bob",
+    "gender": "male",
+    "country": "Chad"
+
+  }
+]

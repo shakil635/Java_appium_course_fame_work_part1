@@ -79,6 +79,8 @@ public class CartPage  extends AndroidAction {
  }
 
 
+
+}
 //
 // public  Double getFormattedAmount(String amount){
 //
@@ -88,14 +90,9 @@ public class CartPage  extends AndroidAction {
 // }
 
 
- public  void submitOder(){
-  checkBox.click();
-  precced.click();
-
-
- }
-
-
-
-
-}
+// public  void submitOder(){
+//  checkBox.click();
+//  precced.click();
+//
+//
+// }

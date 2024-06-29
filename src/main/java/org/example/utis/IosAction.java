@@ -8,10 +8,11 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IosAction {
+public class IosAction extends  AppiumUtils{
 
     IOSDriver iosActionDriver;
     public  IosAction(IOSDriver driver ){
+        //super(driver); //parent class AppiumUtils theke arse
         this.iosActionDriver=driver;
 
     }

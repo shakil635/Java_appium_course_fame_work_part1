@@ -7,10 +7,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 
-public class AndroidAction {
+public class AndroidAction  extends  AppiumUtils{
 
     AndroidDriver androidActionDriver;
     public  AndroidAction(AndroidDriver driver ){
+       // super(driver); //parent class AppiumUtils theke arse
         this.androidActionDriver=driver;
 
     }
@@ -59,11 +60,6 @@ public class AndroidAction {
     }
 
 
-    public  Double reuseSTringFormate(String str){
-        double amount =   Double.parseDouble(str.substring(1));
-        return  amount;
-
-    }
 
 
 

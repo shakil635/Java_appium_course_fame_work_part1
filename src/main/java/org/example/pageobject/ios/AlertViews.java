@@ -1,6 +1,6 @@
 package org.example.pageobject.ios;
 
-import io.appium.java_client.AppiumBy;
+
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
