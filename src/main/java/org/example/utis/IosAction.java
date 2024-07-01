@@ -10,10 +10,10 @@ import java.util.Map;
 
 public class IosAction extends  AppiumUtils{
 
-    IOSDriver iosActionDriver;
+  public   IOSDriver driver;
     public  IosAction(IOSDriver driver ){
         //super(driver); //parent class AppiumUtils theke arse
-        this.iosActionDriver=driver;
+        this.driver=driver;
 
     }
     public  void longPressIos(WebElement element){
@@ -22,7 +22,7 @@ public class IosAction extends  AppiumUtils{
 
         params.put("element", ((RemoteWebElement)element).getId());
         params.put("duration",5);
-        iosActionDriver.executeScript("mobile:touchAndHold", params);
+        driver.executeScript("mobile:touchAndHold", params);
     }
 
 
@@ -34,7 +34,7 @@ public class IosAction extends  AppiumUtils{
         params.put("direction", "down");
         params.put("element", ((RemoteWebElement)element).getId());
 
-        iosActionDriver.executeScript("mobile:scroll",params);
+        driver.executeScript("mobile:scroll",params);
     }
 
 

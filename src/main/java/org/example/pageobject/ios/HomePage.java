@@ -10,14 +10,14 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class HomePage extends IosAction {
 
 
-    IOSDriver homePageDriver;
+  public   IOSDriver driver;
 
 
     public  HomePage(IOSDriver driver)
 
     {
         super(driver);
-        this.homePageDriver =driver;
+        this.driver =driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 
     }
@@ -29,7 +29,7 @@ public class HomePage extends IosAction {
 
     public AlertViews selectAlertView(){
         alertView.click();
-        return new AlertViews(homePageDriver);
+        return new AlertViews(driver);
     }
 
 }

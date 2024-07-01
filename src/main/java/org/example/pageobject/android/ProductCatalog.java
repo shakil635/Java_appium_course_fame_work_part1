@@ -12,14 +12,14 @@ import java.util.List;
 
 public class ProductCatalog  extends AndroidAction {
 
-    AndroidDriver ProductCatalogDriver;
+ public    AndroidDriver driver;
 
 
     public  ProductCatalog(AndroidDriver driver)
 
     {
         super(driver);
-        this.ProductCatalogDriver =driver;
+        this.driver =driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 
     }
@@ -42,7 +42,7 @@ public class ProductCatalog  extends AndroidAction {
     public  CartPage gotToCartPage() throws InterruptedException {
         cart.click();
         Thread.sleep(2000);
-        return new CartPage(ProductCatalogDriver);
+        return new CartPage(driver);
 
     }
 

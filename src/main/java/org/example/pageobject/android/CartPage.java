@@ -11,12 +11,12 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class CartPage  extends AndroidAction {
-    AndroidDriver cartPageDriver;
+   public AndroidDriver driver;
     public  CartPage(AndroidDriver driver)
 
     {
         super(driver);
-        this.cartPageDriver =driver;
+        this.driver =driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 
     }

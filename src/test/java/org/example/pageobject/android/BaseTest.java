@@ -1,6 +1,7 @@
 package org.example.pageobject.android;
 
 import com.google.common.collect.ImmutableMap;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -8,16 +9,17 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.example.utis.AndroidAction;
 import org.example.utis.AppiumUtils;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.*;
 
@@ -26,12 +28,14 @@ public class BaseTest extends AppiumUtils {
 
 //BaseTest extends AppiumUtils for pass method getJsonData in grandson DataProviderTestSameDataDiffirentTest like:AppiumUtils -> BaseTest -> DataProviderTestSameDataDiffirentTest
 
-    AndroidDriver driver;
-    AppiumDriverLocalService service;
+   public   AndroidDriver driver;
+   public   AppiumDriverLocalService service;
     FromPage fromPage;
+   public AndroidAction androidDriver;
 
 
-    @BeforeClass
+
+    @BeforeClass (alwaysRun = true)
     public  void ConfigarAppium() throws MalformedURLException, URISyntaxException {
         service = new AppiumServiceBuilder()
                 //Appium code --> Appium server --> mobile.
@@ -60,15 +64,18 @@ public void driverStart()throws MalformedURLException, URISyntaxException{
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-            AndroidAction androidDriver = new AndroidAction(driver);
+             androidDriver = new AndroidAction(driver);
             fromPage = new FromPage(driver);
+
 
     }
 
 
 
 
-    @AfterClass
+
+
+    @AfterClass (alwaysRun = true)
     public  void tearDown()
     {
 

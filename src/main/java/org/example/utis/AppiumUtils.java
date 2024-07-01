@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.appium.java_client.AppiumDriver;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -75,6 +77,24 @@ public class AppiumUtils {
 
 
 
+
+    public String getScreenShot(AppiumDriver driver, String testCaseName) throws IOException {
+        File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        String destinationFile = System.getProperty("user.dir")+"//reportes//" + testCaseName+".png";
+        FileUtils.copyFile(source, new File(destinationFile));
+        return destinationFile;
+    }
+    /*
+    driver objectk TakesScreenshot e type cast kora hoice.getScreenshotAs method er madhome screen short neya hocce.
+    OutputType.FILE deya screen short rakhar path banano hocce bortoman dir tarsate reports folder and testCase er name er ses .png add kortesi.
+
+    System.getProperty deya reports dictory er modde ,png acreen short rakha hocce ba rakhar jonno bola hocce.
+    source file k copy kore destinationFile e copy kore rakhe.
+
+
+
+     */
 
 
 }

@@ -10,14 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FromPage extends AndroidAction {
 
-    AndroidDriver fromPageDriver;
+  public   AndroidDriver driver;
 
 
     public  FromPage(AndroidDriver driver)
 
     {
         super(driver);
-   this.fromPageDriver =driver;
+   this.driver =driver;
    PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 
     }
@@ -44,7 +44,7 @@ this deya bujano hocce PageFactory.initElements kai class er element gula inshil
 
     public  void setNameFailed(String name){
         nameFiled.sendKeys(name);
-        fromPageDriver.hideKeyboard();
+        driver.hideKeyboard();
     }
 
 //driver.findElement(AppiumBy.id("com.androidsample.generalstore:id/radioFemale")).click();
@@ -79,7 +79,7 @@ this deya bujano hocce PageFactory.initElements kai class er element gula inshil
         countryList.click();
         scrollToText(countryName);
         //reuable method for scrolling
-        fromPageDriver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='"+countryName+"']")).click();
+        driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='"+countryName+"']")).click();
     }
 /*
 first click kortese country list er upo tar por scroll kortese.country name alada alada hote pare tai dynamicly deya hoice jano
@@ -98,7 +98,7 @@ country name jay hok na kno problem ba error na hoy.
 
         shopButton.click();
         Thread.sleep(2000);
-        return new ProductCatalog(fromPageDriver);
+        return new ProductCatalog(driver);
     }
 
     /*

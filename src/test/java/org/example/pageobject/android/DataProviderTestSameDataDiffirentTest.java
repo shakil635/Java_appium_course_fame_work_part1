@@ -1,5 +1,6 @@
 package org.example.pageobject.android;
 
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class DataProviderTestSameDataDiffirentTest extends BaseTest {
 
-    @Test(dataProvider = "getData")
+    @Test(dataProvider = "getData",groups = {"Smokes"})//(alwaysRun = true)
     /*
     dataProvider akti default abastrak method.@DataProvider er method er name getData k bole deya hoice.
     dataProviderTest method er modde parameter gula pass kora hoice.
@@ -26,6 +27,7 @@ public class DataProviderTestSameDataDiffirentTest extends BaseTest {
 
         //FromPage fromPage = new FromPage(driver);  //this object call BaseTest blew manage
         //ProductCatalog productCatalog1 = new ProductCatalog(driver);
+
 
         fromPage.setNameFailed(input.get("name"));
         fromPage.setGender(input.get("gender"));
@@ -46,7 +48,7 @@ public class DataProviderTestSameDataDiffirentTest extends BaseTest {
 
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public  void preSetup(){
 
         try {
@@ -104,7 +106,7 @@ second part tuku sobsumoy akoi thakbe tai first part tuku daynamic vabe generate
 
  */
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public  void afterMethoid(){
         driver.quit();
     }

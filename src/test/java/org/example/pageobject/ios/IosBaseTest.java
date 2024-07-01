@@ -4,6 +4,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.example.utis.AppiumUtils;
 import org.example.utis.IosAction;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -19,11 +20,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class IosBaseTest {
+public class IosBaseTest extends AppiumUtils {
 
 
-    IOSDriver driver;
-    AppiumDriverLocalService service;
+ public    IOSDriver driver;
+ public    AppiumDriverLocalService service;
 
 
     @BeforeClass

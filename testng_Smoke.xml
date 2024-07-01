@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <groups>
+    <run>
+        <include name="Smokes"/>
+    </run>
+    </groups>
+    <listeners>
+        <listener class-name="org.example.pageobject.android.Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/java/Java_appium_course_fame_work_part1">
+        <classes>
+            <class name="org.example.pageobject.android.DataProviderTestSameDataDiffirentTest">
+                <methods>
+                    <include name="dataProviderTest"/>
+                    <include name="afterMethoid"/>
+                </methods>
+            </class>
+            <class name="org.example.pageobject.android.ExtentReportNg">
+                <methods>
+                    <include name="getReportobject"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

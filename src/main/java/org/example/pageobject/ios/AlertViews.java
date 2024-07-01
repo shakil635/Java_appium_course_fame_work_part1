@@ -11,14 +11,14 @@ import org.openqa.selenium.support.PageFactory;
 public class AlertViews extends IosAction {
 
 
-    IOSDriver alertViewsDriver;
+ public    IOSDriver driver;
 
 
     public AlertViews(IOSDriver driver)
 
     {
         super(driver);
-        this.alertViewsDriver =driver;
+        this.driver =driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 
     }
