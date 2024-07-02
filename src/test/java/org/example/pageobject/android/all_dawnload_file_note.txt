@@ -1,0 +1,26 @@
+
+
+
+1# plugins url https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html   |  <build> <pluginManagement> add first and then past plugins
+
+2#  mvn test -p(id Name)) no space  (C/D directory whoes dir you stay follow carefully)
+
+3# runTime send parameters: mvn test -pSmokes -DipAddress=123.4.5.0
+
+
+>>>>>>>>>>>>>Maven>>>>>>>>>>>>>>
+1.dawnload maven offical site.
+2.maven bin path add env (name=MAVEN_HOME,value=dirPath(bin))
+3.check maven in cmd mvn -v
+4.run profile in this command: mvn test -pSmokes (Smokes is profile name)
+5.also run parameterized : mvn test -pSmokes -DipAddress=123.4.5.0(D is requried)
+
+
+
+
+
+>>>>>>>>>>>>>jenkins>>>>>>>>>>>>>>
+1.dawnload jenkins.
+2.open cmd go genkins path like : if jenkin stay D commend: first comment D: and second comment cd jenkins directory path.
+3.lastly commend for run server for localhost:  java -jar jenkins.war -httpPort=8080(optional also 9090 use)
+
