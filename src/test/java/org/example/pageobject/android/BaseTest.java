@@ -56,7 +56,7 @@ public void driverStart()throws MalformedURLException, URISyntaxException{
             options.setApp("D://java//javafameworkpart//src//test//java//resources//General-Store.apk");
             //options.setApp("D://java//javafameworkpart//src//test//java//resources//ApiDemos-debug.apk");
             //options.setChromedriverExecutable("D://transfer//chromedriver_win32//chromedriver.exe");
-
+           //comlet
 
             //driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options); support java 20. after 20 it deprecate
 
