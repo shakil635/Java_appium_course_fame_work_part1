@@ -65,7 +65,7 @@ public void driverStart()throws MalformedURLException, URISyntaxException{
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
              androidDriver = new AndroidAction(driver);
-            fromPage = new FromPage(driver);
+             //fromPage = new FromPage(driver);
 
 
     }

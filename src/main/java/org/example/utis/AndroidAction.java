@@ -21,6 +21,8 @@ public class AndroidAction  extends  AppiumUtils{
        // super(driver); //parent class AppiumUtils theke arse
         this.driver=driver;
 
+
+
     }
 
 
