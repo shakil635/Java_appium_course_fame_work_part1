@@ -63,6 +63,9 @@ public class CartPage  extends AndroidAction {
     productList er size ta count er modde rakha hocce.
     for loop er madhome akta strin hisabe amountString er modde rakha hocce.
     amountString k double e convert kora hocce an d samne theke $ bad deya hocce subString er madhome.
+
+
+
      */
 
 
